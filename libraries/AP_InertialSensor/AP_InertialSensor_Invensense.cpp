@@ -938,7 +938,7 @@ void AP_InertialSensor_Invensense::_set_filter_register(void)
     
     if (_fast_sampling) {
         // this gives us 8kHz sampling on gyros and 4kHz on accels
-        config |= BITS_DLPF_CFG_256HZ_NOLPF2;
+        config |= BITS_DLPF_CFG_20HZ;
     } else {
         // limit to 1kHz if not on SPI
         config |= BITS_DLPF_CFG_188HZ;
